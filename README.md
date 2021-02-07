@@ -1,8 +1,8 @@
 # System-Design-Must-know-Concepts.
-Collection of some broad system design concepts, I update whenever I read some new concepts.
+Collection of some broad system design concepts, I update this content whenever I read any new concepts.
 
 
-### Database
+### Databases
 
 * Lost Update
 * ACID property of relational DB
