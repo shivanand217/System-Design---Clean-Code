@@ -16,7 +16,7 @@ Collection of some broad system design concepts, I update this content whenever 
     * Snapshot
     * Serializable. -> Slower.
     
-    ###### Good Read for isolation
+    ##### Good Read for isolation
     (http://highscalability.com/blog/2011/2/10/database-isolation-levels-and-their-effects-on-performance-a.html)
 
 * Transaction states in DB
