@@ -5,7 +5,7 @@ Collection of some broad system design concepts, I update this content whenever 
 ### Databases
 
 * Lost Update
-* ACID property of relational DB
+* ACID(Atomicity, Consistency, Isolation, Durability) property of relational DB.
 * Why isolation?
     * Dirty Read - A Dirty read is the situation when a transaction reads a data that has not yet been committed. 
     * Non Repeatable read - Non Repeatable read occurs when a transaction reads same row twice, and get a different value each time.
