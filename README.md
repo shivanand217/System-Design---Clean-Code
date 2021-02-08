@@ -35,14 +35,34 @@ Good Design (SOLID):
 * Single responsibility principle - Each class must should be responsible for only single task, like let’s say we have a 
 
 ```swift
+
 class CurrencyConverter { 
    func fetchRates(sourceCurrency:String, requiredCurrency:String, completionBlock:@escaping (Double, Error?)->Void) {}
    func save(rate:Double, souceCurrency:String, targetCurrency:String) throws {}
    func convert(amount:Double, sourceCurrency:String, targetCurrency:String) -> Double {}
 }
+
 ``` 
 
-So to make this class to take responsibility of only one thing, it should be splitted  to multiple classes like class CurrencyConverter { func convert() }, class WebService { func fetchRates() } and class LocalPersistence { func save<T>(key:T) }. So that each class is responsible for doing a separate task.
+So to make this class to follow single responsibility principle, it should be splitted  to multiple classes like :-
+
+```swift
+
+class CurrencyConverter { 
+   func convert(amount:Double, sourceCurrency:String, targetCurrency:String) -> Double {}
+}
+
+class WebService { 
+   func fetchRates(sourceCurrency:String, requiredCurrency:String, completionBlock:@escaping (Double, Error?)->Void) {}
+} 
+
+class LocalPersistence { 
+   func save<T>(key:T) 
+}
+
+```
+
+So that each class is responsible for doing a single task.
    
 * Open closed principle - 
   * Entities should be open for extension but closed for modification.
