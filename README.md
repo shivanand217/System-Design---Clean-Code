@@ -1,7 +1,6 @@
 # System-Design-And-Clean-Code-Concepts
-Collection of some broad system design and clean coding concepts to adhere for becoming a better software engineer. 
-Be a better software engineer, one day at a time.
-
+Collection of some broad system design and clean coding concepts to adhere for becoming a better software engineer.
+Improving one day at a time.
 
 ### Databases.
 
