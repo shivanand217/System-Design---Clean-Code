@@ -2,7 +2,7 @@
 Collection of some broad system design concepts, I update this content whenever I read any new concepts.
 
 
-### Databases
+### Databases.
 
 * Lost Update
 * ACID(Atomicity, Consistency, Isolation, Durability) property of relational DB.
@@ -21,7 +21,8 @@ Collection of some broad system design concepts, I update this content whenever 
 
 * Transaction states in DB
 
-### Clean Code (Good design)
+### Clean Code Principles.
+
 Signs of bad code design:
 * Rigidity
     * Cascading code changes(Change in one part of the code, requires some other part to be modified).
@@ -29,4 +30,8 @@ Signs of bad code design:
     * Fixing one problem breaks something else.
 * Immobility
     * Hard to reuse some part of the code due to tight coupling.
+    
+Good Design (SOLID):
+* Single responsibility principle - Each class must should be responsible for only single task, like let’s say we have a class CurrencyConverter, which have some methods like fetchRates(), save(), convert() etc). So to make this class to take responsibility of only one thing, it should be splitted  to multiple classes like class CurrencyConverter { func convert() }, class WebService { func fetchRates() } and class LocalPersistence { func save<T>(key:T) }. So that each class is responsible for doing a separate task.
+
 
