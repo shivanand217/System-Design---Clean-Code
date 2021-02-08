@@ -32,7 +32,7 @@ Signs of bad code design:
     * Hard to reuse some part of the code due to tight coupling.
     
 Good Design (SOLID):
-* Single responsibility principle - Each class must should be responsible for only single task, like let’s say we have a class CurrencyConverter, which have some methods like fetchRates(), save(), convert() etc). So to make this class to take responsibility of only one thing, it should be splitted  to multiple classes like class CurrencyConverter { func convert() }, class WebService { func fetchRates() } and class LocalPersistence { func save<T>(key:T) }. So that each class is responsible for doing a separate task.
+* Single responsibility principle - Each class must should be responsible for only single task, like let’s say we have a ``class CurrencyConverter { func fetchRates(), func save(), func convert() )``. So to make this class to take responsibility of only one thing, it should be splitted  to multiple classes like class CurrencyConverter { func convert() }, class WebService { func fetchRates() } and class LocalPersistence { func save<T>(key:T) }. So that each class is responsible for doing a separate task.
    
 * Open closed principle - 
   * Entities should be open for extension but closed for modification.
