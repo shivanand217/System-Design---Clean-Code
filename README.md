@@ -33,13 +33,15 @@ Signs of bad code design:
     
 Good Design (SOLID):
 * Single responsibility principle - Each class must should be responsible for only single task, like let’s say we have a class CurrencyConverter, which have some methods like fetchRates(), save(), convert() etc). So to make this class to take responsibility of only one thing, it should be splitted  to multiple classes like class CurrencyConverter { func convert() }, class WebService { func fetchRates() } and class LocalPersistence { func save<T>(key:T) }. So that each class is responsible for doing a separate task.
-       * Open closed principle - 
-           * Entities should be open for extension but closed for modification.
-           * Add new behavior without modifying existing code.
-           * Relies on object oriented concepts like inheritance, composition and polymorphism.
-    * Liskov Substitution Principle - Ability to replace references to base classes with objects of derived classes.
-    * Interface segregation principle  - 
-        * Deals with the problem of fat interface.
-        * Clients shouldn’t depend upon the interfaces they don’t use.
+   
+* Open closed principle - 
+  * Entities should be open for extension but closed for modification.
+  * Add new behavior without modifying existing code.
+  * Relies on object oriented concepts like inheritance, composition and polymorphism.
+  
+* Liskov Substitution Principle - Ability to replace references to base classes with objects of derived classes.
+* Interface segregation principle  - 
+  * Deals with the problem of fat interface.
+  * Clients shouldn’t depend upon the interfaces they don’t use.
 
 
