@@ -1,4 +1,4 @@
-# System-Design-Must-know-Concepts.
+# System-Design-And-Clean-Code-Concepts
 Collection of some broad system design concepts, I update this content whenever I read any new concepts.
 
 
@@ -20,4 +20,13 @@ Collection of some broad system design concepts, I update this content whenever 
     (http://highscalability.com/blog/2011/2/10/database-isolation-levels-and-their-effects-on-performance-a.html)
 
 * Transaction states in DB
+
+### Clean Code (Good design)
+Signs of bad code design:
+* Rigidity
+    * Cascading code changes(Change in one part of the code, requires some other part to be modified).
+* Fragility
+    * Fixing one problem breaks something else.
+* Immobility
+    * Hard to reuse some part of the code due to tight coupling.
 
