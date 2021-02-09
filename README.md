@@ -82,7 +82,7 @@ So that each class is responsible for doing a single task.
   * Modules should depend on abstractions.
   * Abstractions should not depend on details, but details should depends on abstraction.
   
-This Persistence class below is tightly coupled with the logger class. So that if anything changes in the Logger class then the persistence class will also needs to be changed.
+This Persistence class below is tightly coupled with the logger class. So that if anything changed in the Logger class then the persistence class will also needs to be changed.
 
 ```swift
 class Persistence {
@@ -103,7 +103,7 @@ class Logger {
 }
 ```
 
-We can remove this tight coupling by having this logging functionality exposed via an interface/protocol so that the only logger class is being affected.
+We can remove this tight coupling by having this logging functionality exposed via an interface/protocol so that only the Logger class is being affected.
 
 ```swift
 protocol Logging {
