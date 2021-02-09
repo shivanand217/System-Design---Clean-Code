@@ -2,6 +2,8 @@
 Collection of some broad system design and clean coding concepts to adhere for becoming a better software engineer.
 Improving one day at a time.
 
+Open to collaborate, kindly make a pull request if you found anything wrong.
+
 ### Databases.
 
 * Lost Update
