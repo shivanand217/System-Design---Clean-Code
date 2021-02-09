@@ -73,5 +73,61 @@ So that each class is responsible for doing a single task.
 * **Interface segregation principle**  - 
   * Deals with the problem of fat interface.
   * Clients shouldn’t depend upon the interfaces they don’t use.
+  
+* Dependency Inversion Principle - 
+  * Deals with reusability.
+  * Avoids high-level -> low-level module dependency,  our high level classes should depend on low level abstractions.
+  * Modules should depend on abstractions.
+  * Abstractions should not depend on details, but details should depends on abstraction.
+  
+This Persistence class below is tightly coupled with the logger class. So that if anything changes in the Logger class then the persistence class will also needs to be changed.
+
+```swift
+class Persistence {
+    private var logger:Logger = Logger()
+    
+    func save(data: Data, to url: URL) throws {
+        do {
+            try data.write(to: url)
+        }catch {
+            logger.log("\(error)", severity: 10)
+        }
+    }
+}
+class Logger {
+    func log(_ message: String, severity: Int) {
+        print("error: \(message)")
+    }
+}
+```
+
+We can remove this tight coupling by having this logging functionality exposed via an interface/protocol so that the only logger class is being affected.
+
+```swift
+protocol Logging {
+    func log(_ message: String, severity: Int)
+}
+class Persistence {
+    private var logger:Logging!
+    
+    init(logger: Logging) {
+        self.logger = logger
+    }
+    
+    func save(data: Data, to url: URL) throws {
+        do {
+            try data.write(to: url)
+        }catch {
+            logger.log("\(error)", severity: 10)
+        }
+    }
+}
+class Logger: Logging {
+    func log(_ message: String, severity: Int) {
+        print("error: \(message) - severity: \(severity)")
+    }
+}
+```
+
 
 
