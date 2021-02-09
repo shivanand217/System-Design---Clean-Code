@@ -76,7 +76,7 @@ So that each class is responsible for doing a single task.
   * Deals with the problem of fat interface.
   * Clients shouldn’t depend upon the interfaces they don’t use.
   
-* Dependency Inversion Principle - 
+* **Dependency Inversion Principle** - 
   * Deals with reusability.
   * Avoids high-level -> low-level module dependency,  our high level classes should depend on low level abstractions.
   * Modules should depend on abstractions.
